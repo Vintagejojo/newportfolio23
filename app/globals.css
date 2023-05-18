@@ -18,11 +18,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, #0f2027, #203a43, #1a3f4f);
+  background: linear-gradient(to right, #0f2027, #203a43, #1a3f4f);
 }
 
 
-.hero-container {
-  margin-top: 50%;
-  margin-left: 50%;
-}
