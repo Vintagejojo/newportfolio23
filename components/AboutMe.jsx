@@ -26,7 +26,7 @@ export default function AboutMe() {
             <div className="my-10 md:pb-48">
                 <h1 className=" mb-12 sm:mb-8 text-center font-bold text-4xl">
                     Get to know me....
-                <hr className="w-20 h-1 my-6 mx-auto bg-slate-400 border-0 rounded" />
+                <hr className="w-20 h-1 my-6 mx-auto bg-slate-500 border-0 rounded" />
                 </h1>
                 <div className="flex flex-row md:flex-col justify-center align-top items-stretch">
                     {/* first section lives below */}

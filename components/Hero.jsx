@@ -8,7 +8,7 @@ import {HiArrowDown} from "react-icons/hi"
 export default function Hero() {
     return (
         <section>
-            <div className="flex flex-col text-center items-center justify-center mt-10 py-10 sm:py-30 md:flex-row md:space-x-4 md:text-left md:py-40">
+            <div className="flex flex-col text-center items-center justify-center mt-10 py-6 sm:py-20 md:flex-row md:space-x-4 md:text-left md:py-30">
                 <div className="md:w-1/2 md:mt-2" >
                     <Image className="rounded-full" src="/jopic.jpg" alt="my head" width={300} height={300} />    
                 </div>
