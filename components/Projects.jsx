@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
+import { BsGithub, BsLink } from "react-icons/bs"
 
 const projects = [
     {
@@ -18,6 +18,7 @@ const projects = [
         github: "https://github.com/Vintagejojo/vuetodo",
         link: "https://shimmering-raindrop-68cbcc.netlify.app/"
     }
+    
 ]
 
 export default function Projects() {
@@ -30,33 +31,39 @@ export default function Projects() {
             {projects.map((project, idx)=> {
                 return (
                     <div key={idx}>
-                        <div className="flex flex-col items-center sm:w-1/2 md:w-full md:mb-12 w-500 h-500 rounded-xl shadow-xl hover:opacity-80">
+                        <div className="flex flex-col items-center sm:w-1/2 md:w-full md:mb-12 w-500 h-500 ">
                             <div className="md:w-1/2">
                                 <Image 
                                 src={project.image}
                                 alt="picture of my project"
                                 height={1000}
                                 width={1000}
-                                className="rounded-xl shadow-xl"
+                                className="rounded-xl shadow-xl hover:opacity-80"
                                 />
                             </div>
                             {/* paragraph section below */}
                             <div className="mt-4 md:mt-2 flex flex-col md:flex-row md:items-center md:justify-between">
                                 <p>
-                                    <span className="text-xl md:text-2xl xl:text-4xl text-gray-200 clashd block md:inline mt-2 mr-2">{project.name}
+                                    <span className="text-xl md:text-2xl xl:text-4xl text-teal-600 clashd block md:inline mt-2 mr-2">{project.name}
                                     </span>
-                                    <span className="text-gray-400 tracking-wide text-sm md:text-base xl:text-desc mt-4 mr-2">
+                                    <span className="text-slate-100 tracking-wide text-sm md:text-base xl:text-desc mt-4 mr-2">
                                         {project.description}
                                     </span>
                                 </p>
                                 {/* icon below */}
-                                <div className="flex items-center justify-end space-x-5 mt-3 md:mt-0">
+                                <div className="flex items-center justify-end space-x-3 mt-3 md:mt-0">
                                     <Link href={project.github} target="_blank">
                                         <BsGithub 
                                         size={20}
+                                        className="hover:translate-y-1 hover:opacity-80 cursor-pointer"
                                         />
                                     </Link>
-                                    <Link href={project.link} target="_blank"></Link>
+                                    <Link href={project.link} target="_blank">
+                                        <BsLink 
+                                        size={20}
+                                        className="hover:translate-y-1 hover:opacity-80 cursor-pointer"
+                                        />
+                                    </Link>
                                 </div>
                             </div>
                         </div>

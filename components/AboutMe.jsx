@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion"
-import Image from "next/image";
 
 const stats = [
     {stat: "HTML"},
@@ -47,7 +46,7 @@ export default function AboutMe() {
                     </div> 
                     {/* second section dive below */}
                     
-                    <div className="border border-dotted sm:w-1/2 md:w-full">
+                    <div className="sm:w-1/2 md:w-full">
                     <h2 className=" text-2xl font-bold mb-8 sm:mb-4 text-center">
                             Skills
                     </h2>
