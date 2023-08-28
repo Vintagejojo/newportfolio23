@@ -32,26 +32,28 @@ export default function Projects() {
                 return (
                     <div key={idx}>
                         <div className="flex flex-col items-center sm:w-1/2 md:w-full md:mb-12 w-500 h-500 ">
-                            <div className="md:w-1/2">
-                                <Image 
-                                src={project.image}
-                                alt="picture of my project"
-                                height={1000}
-                                width={1000}
-                                className="rounded-xl shadow-xl hover:opacity-80"
-                                />
+                            <div className="project-image">
+                                    <div className="image_wrapper">
+                                        <Image 
+                                        src={project.image}
+                                        alt="picture of my project"
+                                        height={500}
+                                        width={500}
+                                        className="rounded-xl shadow-xl hover:opacity-80"
+                                        />
+                                    </div>
                             </div>
                             {/* paragraph section below */}
                             <div className="mt-4 md:mt-2 flex flex-col md:flex-row md:items-center md:justify-between">
-                                <p>
-                                    <span className="text-xl md:text-2xl xl:text-4xl text-teal-600 clashd block md:inline mt-2 mr-2">{project.name}
+                                <p className="md:flex md:items-center md:justify-between">
+                                    <span className="text-xl md:text-2xl xl:text-4xl text-teal-600 block md:inline mt-2 mr-2">{project.name}
                                     </span>
                                     <span className="text-slate-100 tracking-wide text-sm md:text-base xl:text-desc mt-4 mr-2">
                                         {project.description}
                                     </span>
                                 </p>
                                 {/* icon below */}
-                                <div className="flex items-center justify-end space-x-3 mt-3 md:mt-0">
+                                <div className="flex items-center justify-end space-x-3 mt-4 md:mt-0">
                                     <Link href={project.github} target="_blank">
                                         <BsGithub 
                                         size={20}
