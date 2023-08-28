@@ -52,7 +52,7 @@ export default function AboutMe() {
                     </h2>
                         <div className="flex flex-wrap flex-row justify-center sm:justify-start">
                             {stats.map((item, idx)=>{
-                                return <p key={idx} className="bg-orange-950 px-4 py-2 mr-2 mt-2 font-mono text-gray-400 rounded font-semibold">{item.stat}</p>
+                                return <p key={idx} className="bg-cyan-800 px-4 py-2 mr-2 mt-2 font-mono text-gray-400 rounded font-semibold">{item.stat}</p>
                             })}
                         </div>
                     </div>
