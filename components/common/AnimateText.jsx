@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
 
-const letters = 'αβγδεζηθικλμνξοπρστυφχψω';
+const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 const AnimatedText = ({ text, className }) => {
   const [currentText, setCurrentText] = useState(text);
