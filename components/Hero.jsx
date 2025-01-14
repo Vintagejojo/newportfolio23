@@ -1,5 +1,5 @@
 'use client';
-
+import AnimatedText from './common/AnimateText';
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-scroll/modules';
 import { HiArrowDown } from 'react-icons/hi';
@@ -53,7 +53,7 @@ export default function Hero() {
         </div>
         <div className="md:mt-2 md:w-3/5">
           <h1 className="font-bold text-4xl text-generalbg mt-6 md:text-7xl md:mt-0">
-            Hello, I'm Jordan.
+            Greetings. I'm Jordan.
           </h1>
           <p className="text-lg text-generalbg mt-4 mb-6 md:text-2xl">
             I'm a{' '}

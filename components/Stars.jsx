@@ -3,6 +3,25 @@
 import { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 
+const createCircularTexture = () => {
+  const size = 64;
+  const canvas = document.createElement('canvas');
+  canvas.width = size;
+  canvas.height = size;
+  const context = canvas.getContext('2d');
+
+  // Draw a circle
+  context.beginPath();
+  context.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
+  context.fillStyle = 'white';
+  context.fill();
+
+  const texture = new THREE.Texture(canvas);
+  texture.needsUpdate = true;
+
+  return texture;
+};
+
 const Stars = () => {
   const mountRef = useRef(null);
 
@@ -18,18 +37,16 @@ const Stars = () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
     mountRef.current.appendChild(renderer.domElement);
 
-    // Load background texture
-    const loader = new THREE.TextureLoader();
-    // Replace with your image path below
-    // const backgroundTexture = loader.load('/space_stars.jpg');
-    // scene.background = backgroundTexture;
+    // Create circular texture for stars
+    const starTexture = createCircularTexture();
 
     // Create stars
     const starGeometry = new THREE.BufferGeometry();
     const starMaterial = new THREE.PointsMaterial({
       color: 0xffffff,
       size: 1, // Adjust size to your preference
-      sizeAttenuation: true, // Ensures stars scale with distance
+      map: starTexture, // Use the circular texture
+      transparent: true,
     });
 
     const starVertices = [];

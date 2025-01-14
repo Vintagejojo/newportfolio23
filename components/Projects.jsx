@@ -1,25 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import projects from '@/app/data/projectData';
 import { BsGithub, BsLink } from 'react-icons/bs';
-
-const projects = [
-  {
-    name: 'Next.js Blog',
-    description: 'Blog made I made using Nextv13, MDX, and Tailwind.',
-    image: '/nextjsblogfrontpage.webp',
-    github: 'https://github.com/Vintagejojo/jojonxtblog23',
-    link: 'https://fiftyshadesofv.vercel.app/',
-  },
-  {
-    name: 'Hometown Workforce',
-    description:
-      'I developed a website using ASP.NET Core with MongoDB and MySQL backends, designed to help users find and schedule appointments with handymen in their area. My contributions focused on code cleanup, optimization, and integrating AI features to enhance user experience',
-    image: '/wfskillsimage.webp',
-    github: 'https://github.com/Vintagejojo/HometownWorkforce',
-    link: 'https://wfskills.com/',
-  },
-];
 
 export default function Projects() {
   return (

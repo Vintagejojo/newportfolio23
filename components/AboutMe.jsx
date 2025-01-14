@@ -1,4 +1,5 @@
 import React from 'react';
+import AnimatedText from './common/AnimateText';
 
 const stats = [
   { stat: 'HTML' },
@@ -73,12 +74,11 @@ export default function AboutMe() {
             </h2>
             <div className="flex flex-wrap flex-row justify-center sm:justify-start">
               {stats.map((item, idx) => (
-                <p
+                <AnimatedText
                   key={idx}
+                  text={item.stat}
                   className="bg-royalPurple px-4 py-2 mr-2 mt-2 font-mono text-electricBlue rounded font-semibold"
-                >
-                  {item.stat}
-                </p>
+                />
               ))}
             </div>
           </div>
