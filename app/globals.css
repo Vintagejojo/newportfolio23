@@ -32,6 +32,28 @@ body {
   overflow: hidden;
 }
 
+.eightbit-btn {
+  background: #6a0dad; /* Royal Purple */
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  padding: 20px;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  box-shadow: inset (-6px) (-6px) 0px 0px #4aa52e; /* Highlight */
+}
+
+.eightbit-btn:hover,
+.eightbit-btn:focus {
+  background: #5b0c90; /* Slightly darker royal purple */
+  box-shadow: inset (-9px) (-9px) 0px 0px #4aa52e; /* Highlight */
+}
+
+.eightbit-btn:active {
+  box-shadow: inset 6px 6px 0px 0px #4aa52e; /* Highlight */
+}
+
 /* .icon-color {
   background: #7DBAD4;
 } */

@@ -7,7 +7,7 @@ export default function Footer() {
       <hr className="w-full h-0.5 mx-auto mt-8 bg-neutral-100 border-0" />
       <div className="mx-auto p-4 flex flex-col text-center text-neutral-900 md:flex-row md:justify-between">
         <div>
-          <p className="text-generalbg">© 2025 Made by Jojo</p>
+          <p className="text-electricBlue">© 2025 Made by Jojo</p>
         </div>
         <div className="flex flex-row items-center justify-center space-x-3">
           <a
@@ -16,7 +16,7 @@ export default function Footer() {
             target="_blank"
           >
             <BsGithub
-              className="hover:translate-x-1 transition-transform cursor-pointer bg-iconbg rounded"
+              className="hover:translate-x-1 transition-transform cursor-pointer bg-electricBlue rounded"
               size={30}
             />
           </a>
@@ -26,17 +26,7 @@ export default function Footer() {
             target="_blank"
           >
             <BsLinkedin
-              className="hover:translate-x-1 transition-transform cursor-pointer bg-iconbg rounded"
-              size={30}
-            />
-          </a>
-          <a
-            href="https://twitter.com/rusticjojo?t=lwDfeH_YsB_o3rTeqWfegQ&s=09"
-            rel="nonreferrer"
-            target="_blank"
-          >
-            <BsTwitter
-              className="hover:translate-x-1 transition-transform cursor-pointer bg-iconbg rounded"
+              className="hover:translate-x-1 transition-transform cursor-pointer bg-electricBlue rounded"
               size={30}
             />
           </a>

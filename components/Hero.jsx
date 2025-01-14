@@ -57,7 +57,7 @@ export default function Hero() {
           </h1>
           <p className="text-lg text-generalbg mt-4 mb-6 md:text-2xl">
             I'm a{' '}
-            <span className="font-semibold text-teal-600">
+            <span className="font-semibold text-royalPurple">
               Full Stack Engineer{' '}
             </span>
             transforming challenges into seamless digital solutions
