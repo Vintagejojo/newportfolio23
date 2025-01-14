@@ -1,23 +1,55 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-scroll/modules';
-import Image from 'next/image';
 import { HiArrowDown } from 'react-icons/hi';
+import * as THREE from 'three';
 
 export default function Hero() {
+  const sphereRef = useRef(null);
+
+  useEffect(() => {
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ alpha: true });
+    renderer.setSize(400, 400);
+    sphereRef.current.appendChild(renderer.domElement);
+
+    // Add light
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+    scene.add(ambientLight);
+
+    // Sphere geometry and texture
+    const sphereGeometry = new THREE.SphereGeometry(1.5, 32, 32);
+    const texture = new THREE.TextureLoader().load('/jopic.jpg'); // Replace with your profile image path
+    const sphereMaterial = new THREE.MeshStandardMaterial({ map: texture });
+    const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+    scene.add(sphere);
+
+    // Set camera position
+    camera.position.z = 5;
+
+    // Animation loop
+    const animate = () => {
+      requestAnimationFrame(animate);
+      sphere.rotation.y += 0.01; // Rotate the sphere
+      renderer.render(scene, camera);
+    };
+    animate();
+
+    // Cleanup on component unmount
+    return () => {
+      renderer.dispose();
+      sphereRef.current.removeChild(renderer.domElement);
+    };
+  }, []);
+
   return (
     <section>
       <div className="flex flex-col text-center items-center justify-center mt-10 py-6 sm:py-20 md:flex-row md:space-x-4 md:text-left md:py-30">
         <div className="md:w-1/2 md:mt-2">
-          <Image
-            className="rounded-full"
-            src="/jopic.jpg"
-            alt="my head"
-            width={300}
-            height={300}
-          />
+          {/* Sphere canvas */}
+          <div ref={sphereRef}></div>
         </div>
         <div className="md:mt-2 md:w-3/5">
           <h1 className="font-bold text-4xl text-generalbg mt-6 md:text-7xl md:mt-0">
@@ -28,7 +60,7 @@ export default function Hero() {
             <span className="font-semibold text-teal-600">
               Full Stack Engineer{' '}
             </span>
-            descending into madness....one line of code at a time
+            transforming challenges into seamless digital solutions
           </p>
         </div>
       </div>

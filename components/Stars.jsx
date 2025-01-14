@@ -18,11 +18,17 @@ const Stars = () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
     mountRef.current.appendChild(renderer.domElement);
 
+    // Load background texture
+    const loader = new THREE.TextureLoader();
+    // Replace with your image path below
+    // const backgroundTexture = loader.load('/space_stars.jpg');
+    // scene.background = backgroundTexture;
+
     // Create stars
     const starGeometry = new THREE.BufferGeometry();
     const starMaterial = new THREE.PointsMaterial({
       color: 0xffffff,
-      size: 1.5, // Adjust size to your preference
+      size: 1, // Adjust size to your preference
       sizeAttenuation: true, // Ensures stars scale with distance
     });
 
