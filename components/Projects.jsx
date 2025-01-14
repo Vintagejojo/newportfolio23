@@ -16,13 +16,13 @@ export default function Projects() {
           <div key={idx}>
             <div className="flex flex-col items-center sm:w-1/2 md:w-full md:mb-12 w-500 h-500 ">
               <div className="project-image">
-                <div className="image_wrapper">
+                <div className="image_wrapper mt-4">
                   <Image
                     src={project.image}
                     alt="picture of my project"
                     height={500}
                     width={500}
-                    className="rounded-xl shadow-xl hover:opacity-80"
+                    className="rounded-xl shadow-xl hover:opacity-80 sm:mt-4"
                   />
                 </div>
               </div>
