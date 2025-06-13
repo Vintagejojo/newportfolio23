@@ -56,6 +56,12 @@ body {
   box-shadow: inset 6px 6px 0px 0px #4aa52e; /* Highlight */
 }
 
+.header-shadow {
+  text-shadow:     6px 6px 8px gray,                 /* original soft drop shadow */
+    0 0 8px rgba(106, 13, 173, 0.6),  /* purple glow */
+    0 0 2px white;                    /* subtle white halo */
+}
+
 /* .icon-color {
   background: #7DBAD4;
 } */

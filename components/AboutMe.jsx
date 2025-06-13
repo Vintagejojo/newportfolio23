@@ -34,19 +34,19 @@ export default function AboutMe() {
             <h2 className="text-2xl font-bold mb-8 sm:mb-4 text-center text-generalbg">
               About
             </h2>
-            <p>
+            <p className='text-generalbg'>
               I am an
-              <span className="font-extrabold text-royalPurple">
+              <span className="font-extrabold text-fuchsia-500">
                 {' '}
                 aspiring{' '}
               </span>{' '}
               and
-              <span className="font-extrabold text-royalPurple">
+              <span className="font-extrabold text-fuchsia-500">
                 {' '}
                 attentive{' '}
               </span>{' '}
               web developer who likes to
-              <span className="font-extrabold text-royalPurple">
+              <span className="font-extrabold text-fuchsia-500">
                 {' '}
                 tinker.{' '}
               </span>{' '}
@@ -54,15 +54,15 @@ export default function AboutMe() {
             </p>
             <br />
             <br />
-            <p>
-              <span className="font-extrabold text-royalPurple">
+            <p className='text-generalbg'>
+              <span className="font-extrabold text-fuchsia-500">
                 {' '}
                 USAF Veteran{' '}
               </span>{' '}
               and Gulf States dweller, I've been involved with all things
               computer and tech for the better part of a decade and a half. With
               a passion for coding and
-              <span className="font-extrabold text-royalPurple">
+              <span className="font-extrabold text-fuchsia-500">
                 {' '}
                 continuous learning
               </span>{' '}
