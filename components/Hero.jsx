@@ -52,8 +52,8 @@ export default function Hero() {
           <div ref={sphereRef}></div>
         </div>
         <div className="md:mt-2 md:w-3/5">
-          <h1 className="font-bold text-4xl text-generalbg mt-6 md:text-7xl md:mt-0">
-            Greetings. I'm Jordan.
+          <h1 className="header-shadow font-bold text-4xl text-generalbg mt-6 md:text-7xl md:mt-0">
+            Hey there. I'm Jordan.
           </h1>
           <p className="text-lg text-generalbg mt-4 mb-6 md:text-2xl">
             I'm a{' '}
