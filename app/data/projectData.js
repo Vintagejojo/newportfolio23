@@ -1,7 +1,7 @@
 const projects = [
   {
     name: 'Next.js Blog',
-    description: 'Blog made I made using Nextv13, MDX, and Tailwind.',
+    description: 'A personal blog I developed using Next.js 13, leveraging MDX for flexible content authoring and Tailwind CSS for a sleek, responsive design.',
     image: '/nextjsblogfrontpage.webp',
     github: 'https://github.com/Vintagejojo/jojonxtblog23',
     link: 'https://fiftyshadesofv.vercel.app/',
@@ -22,6 +22,21 @@ const projects = [
     github: 'https://github.com/Vintagejojo',
     link: 'https://mspathfinder.org/',
   },
+  {
+    name: 'Mississippi Coding Academies',
+    description:
+      'I contributed to the design and development of a WordPress site, customizing layouts with CSS and enhancing functionality through bespoke PHP solutions.',
+    image: '/mscodingsc.webp',
+    github: 'https://github.com/Vintagejojo',
+    link: 'https://mscoding.org/',
+  },
+  {
+    name: 'Can Help',
+    description:
+      'A WordPress-based service platform designed to let users schedule helpers to move their trash bins to the curb, built with custom CSS and PHP to create a streamlined and responsive experience.',
+    image: '/canhelpsc.webp',
+    github: 'https://github.com/Vintagejojo',
+    link: 'https://can-help.com',
+  },
 ];
-
 export default projects;

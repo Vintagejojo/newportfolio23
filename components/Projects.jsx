@@ -29,7 +29,7 @@ export default function Projects() {
               {/* paragraph section below */}
               <div className="mt-4 md:mt-2 flex flex-col md:flex-row md:items-center md:justify-between">
                 <p className="md:flex md:items-center md:justify-between">
-                  <span className="text-xl md:text-2xl xl:text-4xl text-fuchsia-500 block md:inline mt-2 mr-2">
+                  <span className="text-xl md:text-2xl xl:text-4xl mr-4 header-shadow text-fuchsia-500 block md:inline mt-2 mr-2">
                     {project.name}
                   </span>
                   <span className="text-slate-100 tracking-wide text-sm md:text-base xl:text-desc mt-4 mr-2">
